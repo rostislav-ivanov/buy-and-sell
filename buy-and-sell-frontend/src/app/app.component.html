@@ -1,0 +1,14 @@
+<div id="page-wrap">
+  <div id="max-width-column" *ngIf="isSignIn">
+    <app-nav-bar></app-nav-bar>
+    <div id="content-wrap">
+      <router-outlet></router-outlet>
+    </div>
+    <button (click)="signOutClick()">Sign Out</button>
+  </div>
+  <div id="max-width-column" *ngIf="!isSignIn">
+    <app-nav-bar></app-nav-bar>
+    <h1>You need to sign first</h1>
+    <button (click)="signInClick()">Sign In With Google</button>
+  </div>
+</div>
